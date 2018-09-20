@@ -1,0 +1,15 @@
+.mythumbnail {
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    
+}
+
+.mythumbnail img {
+    max-height: 200px;
+       
+
+}
+
+
+
