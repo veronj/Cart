@@ -8,6 +8,9 @@
 @yield('styles')
 </head>
 <body>
+
+@include('partials.header')
+
 @yield('content')
 
 
