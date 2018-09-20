@@ -8,7 +8,7 @@
       <div class="caption">
         <h3>Black company</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ratione, rem ad labore nulla nemo. Impedit doloremque excepturi voluptates asperiores dolorum hic accusamus. Cum ipsam sapiente soluta iste, asperiores officia.</p>
-        <div> <a href="#" class="btn btn-primary pull-right" role="button">Button</a></div>
+        <div class="clearfix"> <a href="#" class="btn btn-primary pull-right" role="button">Button</a></div>
       </div>
     </div>
   </div>
