@@ -64,4 +64,11 @@ class UserController extends Controller
         Auth::logout();
         return redirect()->back();
     }
+
+public function getAllUsers()
+{
+    $users = User::all();
+    dd($users);
+}
+
 }

@@ -16,35 +16,48 @@ Route::get('/', [
     'as' => 'product.index'
 ]);
 
+
+
 Route::group(['prefix' => 'user'], function() {
     Route::get('/signup', [
         'uses' => 'UserController@getSignup',
-        'as' => 'user.signup'
+        'as' => 'user.signup',
+        'middleware' => 'guest'
     ]);
     
     Route::post('/signup', [
         'uses' => 'UserController@postSignup',
-        'as' => 'user.signup'
+        'as' => 'user.signup',
+        'middleware' => 'guest'
     ]);
     
     Route::get('/signin', [
         'uses' => 'UserController@getSignin',
-        'as' => 'user.signin'
+        'as' => 'user.signin',
+        'middleware' => 'guest'
     ]);
     
     Route::post('/signin', [
         'uses' => 'UserController@postSignin',
-        'as' => 'user.signin'
+        'as' => 'user.signin',
+        'middleware' => 'guest'
     ]);
     
     Route::get('/profile', [
         'uses' => 'UserController@getProfile',
-        'as' => 'user.profile'
+        'as' => 'user.profile',
+        'middleware' => 'auth'
     ]);
     
     Route::get('/logout', [
         'uses' => 'UserController@getLogout',
-        'as' => 'user.logout'
+        'as' => 'user.logout',
+        'middleware' => 'auth'
+    ]);
+
+    Route::get('/users', [
+        'uses' => 'UserController@getAllUsers',
+        'as' => 'user.index'
     ]);
 
 });

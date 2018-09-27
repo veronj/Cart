@@ -17,7 +17,6 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{ route('user.signup') }}">Sign Up</a>
           <a class="dropdown-item" href="{{ route('user.signin') }}">Sign In</a>
-          <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
         </div>
       </li>
