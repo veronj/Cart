@@ -16,6 +16,16 @@ class ProductController extends Controller
         return view('shop.index', ['products' => $products]);    
     }
 
+    public function getCart()
+    {
+        if (!Session::has('cart')) {
+            return view('shop.shopping-cart', ['products' => null]);
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('shop.shopping-cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+    }
+
     public function getAddToCart(Request $request, $id)
     {
         $product = Product::find($id);
