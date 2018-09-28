@@ -16,7 +16,10 @@ Route::get('/', [
     'as' => 'product.index'
 ]);
 
-
+Route::get('/add-to-cart/{id}', [
+    'uses' => 'ProductController@getAddToCart',
+    'as' => 'product.addToCart',
+]);
 
 Route::group(['prefix' => 'user'], function() {
     Route::get('/signup', [
