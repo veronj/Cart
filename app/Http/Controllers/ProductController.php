@@ -37,4 +37,13 @@ class ProductController extends Controller
         
         return redirect()->route('product.index');
     }
+
+    public function getCheckout()
+    {
+        if (!Session::has('cart')) {
+            return view('shop.shopping-cart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+    }
 }
