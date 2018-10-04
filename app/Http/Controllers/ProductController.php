@@ -49,4 +49,18 @@ class ProductController extends Controller
 
         return view('shop.checkout', ['total' => $total]);
     }
+
+    public function postCheckout()
+    {
+        \Stripe\Stripe::setApiKey("sk_test_G50bTvOr0uw7wE6kQxVcC10t");
+
+        $charge = \Stripe\Charge::create([
+        'amount' => 999,
+        'currency' => 'usd',
+        'source' => 'tok_visa',
+        'receipt_email' => 'jenny.rosen@example.com',
+        ]);
+
+        dd($charge);
+    }
 }
