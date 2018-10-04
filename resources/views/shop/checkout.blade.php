@@ -6,7 +6,7 @@
 <div class="row">
 <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
 <h4>Your total: {{ $total }}</h4>
-<form action="{{ route('checkout') }}" method="post" id="checkout-form">
+<form action="{{ route('product.checkout') }}" method="post" id="checkout-form">
     <div class="row">
         <div class="col-xs-12">
             <div class="form-group">
