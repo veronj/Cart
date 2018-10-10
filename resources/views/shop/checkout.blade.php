@@ -7,6 +7,7 @@
 <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
 <h4>Your total: {{ $total }}</h4>
 <form action="{{ route('product.checkout') }}" method="post" id="checkout-form">
+@csrf
     <div class="row">
         <div class="col-xs-12">
             <div class="form-group">
@@ -51,7 +52,7 @@
             </div>
         </div>
     </div>
-    {{ csrf-field() }}    
+    
     <button type="submit" class="btn btn-success">Pay</button>
 </form>
 </div>
