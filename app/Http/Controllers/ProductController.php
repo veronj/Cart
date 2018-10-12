@@ -60,7 +60,7 @@ class ProductController extends Controller
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
 
-
+dd($request->all());
         Stripe::setApiKey("sk_test_G50bTvOr0uw7wE6kQxVcC10t");
         
         try {
