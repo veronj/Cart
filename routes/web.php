@@ -19,11 +19,13 @@ Route::get('/', [
 Route::get('/checkout', [
     'uses' => 'ProductController@getCheckout',
     'as' => 'product.checkout',
+    'middleware' => 'auth'
 ]);
 
 Route::post('/checkout', [
     'uses' => 'ProductController@postCheckout',
     'as' => 'product.checkout',
+    'middleware' => 'auth'
 ]);
 
 Route::get('/add-to-cart/{id}', [
